@@ -62,7 +62,6 @@ jobs:
           scp docker-compose.yml $SECRET_SERVER_USER@$SECRET_SERVER_IP:~/gateway/docker-compose.yml
           ssh $SECRET_SERVER_USER@$SECRET_SERVER_IP "echo $SECRET_GH_PASSWORD | docker login ghcr.io -u $SECRET_GH_USER --password-stdin && cd ~/gateway && VERSION=${{ github.run_number }} docker compose up -d"
         env:
-          GITHUB_USER
           SECRET_SERVER_USER: "${{ secrets.SERVER_USER }}"
           SECRET_SERVER_IP: "${{ secrets.SERVER_IP }}"
           SECRET_GH_USER: "${{ github.actor }}"
