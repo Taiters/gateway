@@ -65,5 +65,5 @@ jobs:
           GITHUB_USER
           SECRET_SERVER_USER: "${{ secrets.SERVER_USER }}"
           SECRET_SERVER_IP: "${{ secrets.SERVER_IP }}"
-          SECRET_GH_USER: ${{ github.actor }}
-          SECRET_GH_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
+          SECRET_GH_USER: "${{ github.actor }}"
+          SECRET_GH_PASSWORD: "${{ secrets.GITHUB_TOKEN }}"
