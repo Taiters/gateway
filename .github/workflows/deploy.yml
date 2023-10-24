@@ -34,6 +34,8 @@ jobs:
         run: |
           echo "$SECRET_COUP_ORIGIN_KEY" > ./config/ssl/coup.dotslashdan.com.key
           echo "$SECRET_COUP_ORIGIN_CERT" > ./config/ssl/coup.dotslashdan.com.crt
+          echo "TEST" > ./config/ssl/sometestfile.txt
+          echo "TEST" > ./config/ssl/sometestdanfile.txt
         env:
           SECRET_COUP_ORIGIN_KEY: "${{ secrets.COUP_ORIGIN_PRIVATE_KEY }}"
           SECRET_COUP_ORIGIN_CERT: "${{ secrets.COUP_ORIGIN_CERTIFICATE }}"
